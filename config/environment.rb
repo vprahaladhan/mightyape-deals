@@ -1,6 +1,6 @@
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'require_all'
 
-require_relative '../lib/sample/cli'
-require_relative '../lib/sample/version'
+require_all 'lib/sample'

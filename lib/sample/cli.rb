@@ -1,45 +1,38 @@
 class Sample::CLI 
   
   def initialize
-    
+    Sample::Scraper.new.get_page
   end
 
   def call
-    puts "Welcome to my Sample Ruby app!".upcase
+    welcome
+
     list_menu
     
-    input = nil
-
-    while (input != 'q' && input != 'Q')
-      case input
-      when '1'
-        puts "Eating..."
-      when "2"
-        puts "Sleeping..."
-      when '3'
-        puts "Running..."
-      when '4'
-        puts "Cleaning..."
-      when '5'
-        puts "Working out..."
+    loop do
+      input = gets.strip
+      (input == 'q' || input == 'Q') && break 
+  
+      if (input.to_i > 0 && input.to_i <= Promotion.all.size) then
+        ap Promotion.find_by_id(input.to_i)
       else 
         puts "Invalid input...Please see below menu for valid choices:"
+        list_menu
       end
-
-      list_menu
-      input = gets.strip 
     end
 
     sign_off
   end
 
+  def welcome 
+    puts "Welcome to my Sample Ruby app!".upcase
+  end
+
   def list_menu
-    puts "1. Eat"
-    puts "2. Sleep"
-    puts "3. Run"
-    puts "4. Clean"
-    puts "5. Workout"
-    print "Enter 'q' or 'Q' to quit: "
+    Promotion.all.each_with_index do |p, index|
+      puts "#{index + 1}. #{p.title}"
+    end
+    print "Enter your choice between 1-12 ('q' or 'Q' to quit): "
   end
   
   def sign_off

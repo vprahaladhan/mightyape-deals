@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/sample.rb'
+require_relative '../config/environment.rb'
 
 Sample::CLI.new.call

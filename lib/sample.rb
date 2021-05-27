@@ -5,4 +5,4 @@ module Sample
   # Your code goes here...
 end
 
-require_relative "../config/environment.rb"
+# require_relative "../config/environment.rb"

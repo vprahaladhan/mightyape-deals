@@ -8,17 +8,17 @@ Gem::Specification.new do |spec|
   spec.authors  = ["prahal"]
   spec.email    = ["vprahaladhan@gmail.com"]
 
-  spec.summary                = "Selection of books from booktopia.com.au-Axi Phase 3 milestone project"
-  spec.description            = "Selection of books from booktopia.com.au-Axi Phase 3 milestone project"
-  spec.homepage               = "https://github.com/vprahaladhan/world-of-books"
+  spec.summary                = "Scraping of deals & promos from MightyApe.com.au-Axi Phase 3 milestone project"
+  spec.description            = "Scraping of deals & promos from MightyApe.com.au-Axi Phase 3 milestone project"
+  spec.homepage               = "https://github.com/vprahaladhan/mightyape-deals"
   spec.license                = "MIT"
   spec.required_ruby_version  = Gem::Requirement.new(">= 2.4.0")
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"]     = spec.homepage
-  spec.metadata["source_code_uri"]  = "https://github.com/vprahaladhan/world-of-books"
-  spec.metadata["changelog_uri"]    = "https://github.com/vprahaladhan/world-of-books/blob/master/CHANGELOG.md"
+  spec.metadata["source_code_uri"]  = "https://github.com/vprahaladhan/mightyape-deals"
+  spec.metadata["changelog_uri"]    = "https://github.com/vprahaladhan/mightyape-deals/blob/master/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

@@ -5,8 +5,8 @@ require 'require_all'
 require 'active_record'
 require 'awesome_print'
 
-require_relative '../lib/sample'
-require_all 'lib/sample'
+require_relative '../lib/mighty_ape'
+require_all 'lib/mighty_ape'
 require_all 'app/models'
 
 DB = ActiveRecord::Base.establish_connection(

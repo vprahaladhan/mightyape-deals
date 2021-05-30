@@ -1,4 +1,4 @@
-class Sample::Scraper
+class MightyApe::Scraper
   @@BASE_URL = "https://www.mightyape.com.au"
 
   def self.get_all_promos

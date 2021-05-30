@@ -3,8 +3,8 @@
 require_relative "lib/sample/version"
 
 Gem::Specification.new do |spec|
-  spec.name     = "sample"
-  spec.version  = Sample::VERSION
+  spec.name     = "mighty_ape"
+  spec.version  = MightyApe::VERSION
   spec.authors  = ["prahal"]
   spec.email    = ["vprahaladhan@gmail.com"]
 

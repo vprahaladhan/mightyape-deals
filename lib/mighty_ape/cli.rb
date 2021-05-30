@@ -1,9 +1,9 @@
-class Sample::CLI 
+class MightyApe::CLI 
   # @@BASE_URL = "https://www.mightyape.com.au"
   attr_accessor :offset, :page
 
   def initialize
-    Sample::Scraper.get_all_promos
+    MightyApe::Scraper.get_all_promos
     @offset = 0
     @page = 1
   end
@@ -56,7 +56,7 @@ class Sample::CLI
     @offset = 0
     @page = 1
     promo = Promotion.find_by_id(input.to_i)
-    Sample::Scraper.get_promo_products(promo)
+    MightyApe::Scraper.get_promo_products(promo)
     list_products(promo)
 
     loop do
@@ -85,7 +85,7 @@ class Sample::CLI
     puts "\n************************************************************************"
     if (@offset == Product.all.size) then
       @page += 1
-      Sample::Scraper.get_promo_products(promo, @page)
+      MightyApe::Scraper.get_promo_products(promo, @page)
     end  
     Product.all[@offset..(@offset + 9)].each_with_index do |p, index| 
       puts '| ' + ((@offset + index + 1).to_s << '. ').ljust(5) + "#{p.title}".ljust(64) + '|'

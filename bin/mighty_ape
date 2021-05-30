@@ -2,4 +2,4 @@
 
 require_relative '../config/environment.rb'
 
-Sample::CLI.new.call
+MightyApe::CLI.new.call

@@ -45,7 +45,7 @@ class MightyApe::CLI
       puts '| ' + ((index + 1).to_s + '.').ljust(4) + p.title.ljust(50) + p.expiry.ljust(15) + '|'
     end
     puts "************************************************************************"
-    print "\nEnter your choice between 1-12 ('q' or 'Q' to quit): "
+    print "\nEnter your choice between 1-#{Promotion.all.size} ('q' or 'Q' to quit): "
   end
   
   def sign_off

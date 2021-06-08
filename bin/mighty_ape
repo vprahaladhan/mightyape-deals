@@ -2,4 +2,8 @@
 
 require_relative '../config/environment.rb'
 
+system("rake db:rollback")
+
+system("rake db:migrate")
+
 MightyApe::CLI.new.call

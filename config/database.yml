@@ -1,3 +1,7 @@
+default_env:
+  :adapter => "sqlite3"
+  :database => "./db/mightyape_deals.db"
+
 development:
   :adapter => "sqlite3"
   :database => "./db/mightyape_deals.db"

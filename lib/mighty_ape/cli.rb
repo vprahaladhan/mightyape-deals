@@ -60,6 +60,7 @@ class MightyApe::CLI
     list_products(promo)
 
     loop do
+      puts "\n"
       if (@offset > 0) then 
         puts "Press 'p' for prev 10 products"
       end

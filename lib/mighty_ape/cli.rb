@@ -60,17 +60,22 @@ class MightyApe::CLI
     list_products(promo)
 
     loop do
-      if (@offset + 10 >= promo.num_of_products) then
-        puts "\nPress 'q' to return to previous menu"
-      else 
-        puts "\nPress 'm' for more products, 'q' to return to previous menu"
+      if (@offset > 0) then 
+        puts "Press 'p' for prev 10 products"
       end
+      if (@offset + 10 <= promo.num_of_products) then
+        puts "Press 'n' for next 10 products"
+      end
+      puts "Press 'q' to return to previous menu"
 
       print "Enter product no (#{offset + 1}-#{offset + 10}) to get more info on: "
       input = gets.strip
       if (input == 'q') then
         break
-      elsif (@offset + 10 <= Product.all.size && input == 'm')
+      elsif (@offset > 0 && input == 'p')
+        @offset -= 10
+        list_products(promo)
+      elsif (@offset + 10 <= Product.all.size && input == 'n')
         @offset += 10
         list_products(promo)
       elsif (input.to_i > @offset && input.to_i < @offset + 11)
